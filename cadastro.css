@@ -1,0 +1,221 @@
+/* --- Fundo geral e estrutura --- */
+body.cadastro-page {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header igual ao das outras páginas --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #6a11cb;
+}
+
+/* --- Área principal --- */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* --- Formulário --- */
+form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 550px;
+  margin: 40px auto;
+}
+
+h2 {
+  text-align: center;
+  color: #6a11cb;
+  margin-bottom: 25px;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: 600;
+  color: #6a11cb;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* --- Botão --- */
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
+
+/* --- Mensagem de sucesso --- */
+.mensagem-sucesso {
+  display: none;
+  background: #e0ffe0;
+  border: 1px solid #6a11cb;
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* --- Rodapé --- */
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  font-size: 0.9em;
+}
+/* --- Garantir a mesma fonte e estilo do nome do site --- */
+.nome-site {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #6a11cb;
+  letter-spacing: 0.5px;
+}
+header .logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-area img.logo {
+  height: 50px;
+}
+
+.logo-area h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+/* --- Força o header da página de cadastro a ficar igual ao das outras páginas --- */
+header.topo {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header.topo .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header.topo .logo {
+  height: 50px;
+}
+
+header.topo h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #6a11cb;
+  margin: 0;
+}
+
+header.topo .main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s;
+}
+
+header.topo .main-nav a:hover,
+header.topo .main-nav a.ativo {
+  color: #6a11cb;
+}

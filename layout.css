@@ -1,0 +1,252 @@
+/* 🧱 LAYOUT PRINCIPAL - Grid, estrutura e responsividade */
+
+/* Estrutura geral */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-branco);
+  padding: var(--space-2) var(--space-4);
+  box-shadow: var(--sombra-card);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.nome-site {
+  font-size: var(--fs-xl);
+  color: var(--cor-roxo-escuro);
+  font-weight: 600;
+}
+
+/* Menu principal */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-3);
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--cor-roxo-escuro);
+  font-weight: 500;
+  transition: 0.3s;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+}
+
+.menu a:hover,
+.menu .ativo {
+  background-color: var(--cor-roxo-medio);
+  color: var(--cor-branco);
+}
+
+/* Conteúdo principal */
+.conteudo {
+  padding: var(--space-5) var(--space-4);
+  background-color: var(--cor-lilas-suave);
+}
+
+/* Seções com fundo lilás e grid responsivo */
+section {
+  margin-bottom: var(--space-5);
+  background-color: var(--cor-roxo-medio);
+  color: var(--cor-branco);
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  box-shadow: var(--sombra-card);
+}
+
+/* Grid de cartões */
+.role-grid,
+.projetos-container,
+.categorias-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  background-color: var(--cor-roxo-escuro);
+  color: var(--cor-branco);
+  padding: var(--space-3);
+  font-size: var(--fs-sm);
+}
+
+/* Breakpoints (5 tamanhos responsivos) */
+@media (max-width: 1200px) {
+  .nome-site { font-size: 1.6rem; }
+}
+
+@media (max-width: 992px) {
+  .menu { gap: var(--space-2); }
+}
+
+@media (max-width: 768px) {
+  .header { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 576px) {
+  .conteudo { padding: var(--space-3); }
+}
+
+@media (max-width: 400px) {
+  .logo { width: 40px; }
+  .nome-site { font-size: 1.3rem; }
+}
+/* ======== BARRA DE MENU ANTERIOR - RESTAURADO ======== */
+.header {
+  background-color: var(--roxo-claro);
+  padding: 20px 0;
+  border-bottom: 3px solid var(--roxo-medio);
+  box-shadow: 0 4px 8px var(--sombra);
+  text-align: center; /* Garante que o titulo-container seja centralizado */
+}
+
+/* NOVO: Container para agrupar e centralizar Logo e Título lado a lado */
+.titulo-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo interno (Logo e H1) */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 15px; /* Espaço entre o título/logo e o menu */
+}
+
+.logo {
+  width: 50px; /* Logo menor para caber ao lado do texto */
+  height: auto;
+  margin-right: 15px; /* Espaço entre a logo e o nome do site */
+}
+
+.nome-site {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--roxo-escuro); /* Cor roxa para o título */
+  margin: 0; /* Remove margens desnecessárias */
+  letter-spacing: 1px;
+}
+
+/* Navegação centralizada (ajuste mínimo, mantém a centralização) */
+.menu-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Botões */
+.menu li a {
+  background-color: var(--roxo-escuro);
+  color: var(--branco);
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px var(--sombra);
+}
+
+.menu li a:hover {
+  background-color: var(--roxo-medio);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px var(--sombra);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .logo {
+    width: 40px; /* Logo ainda menor no mobile */
+    margin-right: 10px;
+  }
+
+  .nome-site {
+    font-size: 20px; /* Título menor no mobile */
+  }
+  
+  .titulo-container {
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .menu li a {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+/* ======== ESTILO PARA GRID DE ROLES (CARDS) ======== */
+.role-grid {
+  display: grid; /* Ativa o layout de grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas flexíveis */
+  gap: 20px; /* Espaço entre os cards */
+  margin-top: 30px; /* Espaço acima da grade de cards */
+}
+
+/* Estilo para ícones dentro dos cards (se necessário) */
+.role-card .icon {
+  font-size: 40px; /* Tamanho do ícone */
+  color: var(--roxo-escuro); /* Cor do ícone */
+  margin-bottom: 15px;
+}
+/* ==== MENU HAMBÚRGUER ==== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--roxo-medio);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Mostra o ícone apenas no mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+}

@@ -1,0 +1,52 @@
+/* ================================
+   GRID SYSTEM - 12 COLUNAS
+   ================================ */
+
+/* Container */
+.container-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Linha */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Colunas base */
+[class^="col-"] {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 12 colunas */
+.col-1 { flex-basis: calc(100% / 12 * 1); }
+.col-2 { flex-basis: calc(100% / 12 * 2); }
+.col-3 { flex-basis: calc(100% / 12 * 3); }
+.col-4 { flex-basis: calc(100% / 12 * 4); }
+.col-5 { flex-basis: calc(100% / 12 * 5); }
+.col-6 { flex-basis: calc(100% / 12 * 6); }
+.col-7 { flex-basis: calc(100% / 12 * 7); }
+.col-8 { flex-basis: calc(100% / 12 * 8); }
+.col-9 { flex-basis: calc(100% / 12 * 9); }
+.col-10 { flex-basis: calc(100% / 12 * 10); }
+.col-11 { flex-basis: calc(100% / 12 * 11); }
+.col-12 { flex-basis: 100%; }
+
+/* BREAKPOINTS */
+@media (max-width: 768px) {
+  .col-md-12 { flex-basis: 100%; }
+  .col-md-6 { flex-basis: 50%; }
+  .col-md-4 { flex-basis: calc(100% / 3); }
+  .col-md-3 { flex-basis: 25%; }
+}
+
+@media (max-width: 480px) {
+  .col-sm-12 { flex-basis: 100%; }
+  .col-sm-6 { flex-basis: 50%; }
+  .col-sm-4 { flex-basis: 33.33%; }
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projetos - ConectaBem</title>
+  
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/estilo.css?v=4">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header" role="banner">
+  <div class="header-inner container">
+    <div class="titulo-container">
+      <img src="imagens/logo.png" class="logo" alt="Logo ConectaBem">
+      <h1 class="nome-site">ConectaBem</h1>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+<nav id="main-menu" class="menu-nav">
+  <ul class="menu">
+    <li><a href="index.html">Início</a></li>
+
+    <li><a href="projetos.html" class="link-projetos">Projetos</a></li>
+
+    <li><a href="cadastro.html">Cadastro</a></li>
+  </ul>
+</nav>
+  </div>
+</header>
+
+<main class="conteudo container">
+  <h2>Nossos Projetos</h2>
+
+  <section id="projetos-page" class="projetos-container">
+
+    <div class="projeto-card">
+      <span class="badge badge-yellow">Social</span>
+      <div class="projeto-card fade-in">
+      <img src="imagens/projetoesperanca.jpg" alt="Projeto Esperança" />
+      <h3>Projeto Esperança</h3>
+      <p>Oferece apoio psicológico e emocional a famílias vulneráveis.</p>
+      <div class="botoes-projeto">
+        <a href="cadastro.html" class="btn-contribuir">Quero ser voluntário</a>
+        <a href="cadastro.html" class="btn-contribuir">Fazer doação</a>
+      </div>
+    </div>
+
+    <div class="projeto-card">
+      <span class="badge badge-pink">Solidariedade</span>
+      <div class="projeto-card fade-in">
+      <img src="imagens/projetomaosqueajudam.jpg" alt="Projeto Mãos que Ajudam" />
+      <h3>Projeto Mãos que Ajudam</h3>
+      <p>Mobiliza voluntários para reformar escolas e espaços comunitários.</p>
+      <div class="botoes-projeto">
+        <a href="cadastro.html" class="btn-contribuir">Quero ser voluntário</a>
+        <a href="cadastro.html" class="btn-contribuir">Fazer doação</a>
+      </div>
+    </div>
+
+    <div class="projeto-card">
+      <span class="badge badge-green">Ambiental</span>
+      <img src="imagens/projetoverdevida.jpg" alt="Projeto Verde Vida" />
+      <h3>Projeto Verde Vida</h3>
+      <p>Incentiva o plantio de árvores e a conscientização ambiental.</p>
+      <div class="botoes-projeto">
+        <a href="cadastro.html" class="btn-contribuir">Quero ser voluntário</a>
+        <a href="cadastro.html" class="btn-contribuir">Fazer doação</a>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 ConectaBem — Todos os direitos reservados.</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const menuNav = document.querySelector(".menu-nav");
+
+  hamburger.addEventListener("click", () => {
+    menuNav.classList.toggle("ativo");
+  });
+});
+</script>
+<div class="toast"></div>
+<div id="modal-bg" class="modal-backdrop">
+  <div class="modal-box">
+    <p>Mensagem importante ✨</p>
+    <button class="btn btn-primary" onclick="closeModal()">Ok</button>
+  </div>
+</div>
+</body>
+</html>
